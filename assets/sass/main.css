@@ -14,42 +14,43 @@ p, a, button, input, label, div {
   font-family: "Roboto", sans-serif;
 }
 
-p {
-  font-size: 2rem;
-}
-
 fieldset {
   width: 40%;
-  margin: 2% auto;
+  margin: 4% auto;
   border: 2px solid white;
 }
 
-#roundsId .cls-fs-rounds p {
+.cls-fs-rounds, .cls-restart, .cls-result {
   text-align: center;
+}
+
+.cls-fs-score, .cls-selection {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cls-fs-rounds p {
+  font-size: 2rem;
   padding: 5%;
 }
-#roundsId .cls-round-select {
+.cls-fs-rounds div {
+  font-size: 1.4rem;
+}
+.cls-fs-rounds .cls-round-select {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   padding: 5% 20%;
 }
-#roundsId .cls-round-select div {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+.cls-fs-rounds .cls-round-select div {
+  margin-bottom: 5%;
 }
-#roundsId .cls-round-counter {
+.cls-fs-rounds .cls-round-counter {
   display: none;
-  text-align: center;
   margin-bottom: 12%;
-}
-#roundsId .cls-round-counter div {
-  font-size: 1.4rem;
 }
 
 .cls-fs-score {
-  display: flex;
-  justify-content: space-evenly;
   align-items: center;
   padding: 5% 0%;
 }
@@ -58,9 +59,8 @@ fieldset {
 }
 
 .cls-result {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
-  text-align: center;
   padding: 2% 0;
 }
 .cls-result div {
@@ -73,8 +73,6 @@ fieldset {
 .cls-selection {
   width: 40%;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-evenly;
   padding: 3%;
 }
 .cls-selection button {
@@ -85,12 +83,9 @@ fieldset {
   padding: 5%;
 }
 
-.cls-restart {
-  text-align: center;
-}
 .cls-restart p {
   font-size: 1.2rem;
-  margin-bottom: 3%;
+  margin: 3% 0;
 }
 .cls-restart a {
   color: orange;

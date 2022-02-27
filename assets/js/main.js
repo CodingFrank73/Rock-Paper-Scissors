@@ -1,4 +1,3 @@
-
 let round = 1;
 let maxRounds = 5;
 let userChoice = 0;
@@ -92,8 +91,10 @@ function startTheGame(userChoice, pcChoice) {
     } else if (round = maxRounds) {
         if (userScore > pcScore) {
             text = `The user wins`;
+            document.getElementsByClassName('fa-user')[0].style.color = "green";
         } else if (userScore < pcScore) {
             text = `The Computer wins`;
+            document.getElementsByClassName('fa-user')[0].style.color = "red";
         } else {
             text = `It was a draw - No winner.....`;
         }
@@ -127,4 +128,3 @@ function whoWin(userChoice, pcChoice) {
 
     return winner;
 }
-
