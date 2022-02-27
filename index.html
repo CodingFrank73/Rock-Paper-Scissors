@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="assets/sass/main.css">
+</head>
+
+<body>
+    <section>
+        <form action="" id="roundsId">
+            <fieldset class="cls-fs-rounds">
+                <p>how many rounds?</p>
+                <div class="cls-round-select">
+                    <div>
+                        <input type="radio" name="rounds" id="five" value="5" checked>
+                        <label for="five">5</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rounds" id="ten" value="10">
+                        <label for="ten">10</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rounds" id="fifteen" value="15">
+                        <label for="fifteen">15</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="rounds" id="twenty" value="20">
+                        <label for="twenty">20</label>
+                    </div>
+                </div>
+                <div class="cls-round-counter">
+                    <div id="counter">0 / 0</div>
+                </div>
+            </fieldset>
+
+            <fieldset class="cls-fs-score">
+                <div><i class="fa-regular fa-user"></i></div>
+                <div id="score"> 0 : 0</div>
+                <div><i class="fa-solid fa-desktop"></i></div>
+            </fieldset>
+
+            <article class="cls-result">
+                <div id="result">Let's play</div>
+            </article>
+
+            <article class="cls-selection">
+                <button id="btnRock" class="fa-regular fa-hand-back-fist"></button>
+                <button id="btnPaper" class="fa-regular fa-hand"></button>
+                <button id="btnScissors" class="fa-regular fa-hand-scissors"></button>
+            </article>
+
+            <article class="cls-restart">
+                <p>MAKE YOUR MOVE.</p>
+                <a id="restart" href="">restart</a>
+            </article>
+        </form>
+    </section>
+    <script src="assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/01c49fc83a.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+body{
+    background-color: #000;
+}
+
+p, a, button, input, label, div{
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-size: 2rem;
+}
+
+fieldset{
+    width: 40%;
+    margin: 2% auto;
+    border: 2px solid white;
+}
+
+#roundsId{
+    // width: 40%;
+    // margin: 3% auto;
+
+    & .cls-fs-rounds p{
+        text-align: center;
+        padding: 5%;
+    }
+
+    & .cls-round-select{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        padding: 5% 20%;
+
+        div{
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    }
+
+    & .cls-round-counter{
+        display: none;
+        text-align: center;
+        margin-bottom: 12%;
+
+        div{
+            font-size: 1.4rem;
+        };
+    }
+}
+
+.cls-fs-score{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5% 0%;
+
+    div{
+        font-size: 2rem;
+    }
+}
+
+.cls-result{
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2% 0;
+
+    div{
+        font-size: 2.5rem;
+
+        sup{
+            font-size: .8rem
+        }
+    };
+}
+
+.cls-selection{
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 3%;
+
+    button{
+        font-size: 2rem;
+        border-radius: 50%;
+        border: 3px solid whitesmoke;
+        background-color: #000;
+        padding: 5%;
+    }
+}
+
+.cls-restart{
+    text-align: center;
+
+    p{
+        font-size: 1.2rem;
+        margin-bottom: 3%;
+    }
+
+    a{
+        color:orange;
+        letter-spacing: 2px;
+    }
+}
