@@ -1,49 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 * {
   padding: 0;
   margin: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(/assets/fonts/Roboto/Roboto-Regular.ttf);
+}
 body {
   background-color: #000;
 }
 
-p, a, button, input, label, div {
+p,
+a,
+h1,
+button,
+input,
+label,
+header,
+div {
   color: whitesmoke;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "sans-serif";
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin: 5% 0 10% 0;
+  color: rgba(237, 232, 232, 0.944);
 }
 
 fieldset {
-  width: 40%;
-  margin: 4% auto;
+  width: 80%;
+  margin: 0 auto;
   border: 2px solid white;
 }
 
-.cls-fs-rounds, .cls-restart, .cls-result {
+.cls-fs-rounds,
+.cls-restart,
+.cls-result {
   text-align: center;
 }
 
-.cls-fs-score, .cls-selection {
+.cls-fs-score,
+.cls-selection {
   display: flex;
   justify-content: space-evenly;
 }
 
-.cls-fs-rounds p {
-  font-size: 2rem;
-  padding: 5%;
+.cls-fs-rounds p,
+.cls-fs-rounds div,
+.cls-fs-score p,
+.cls-fs-score div {
+  font-size: 1.6rem;
 }
-.cls-fs-rounds div {
-  font-size: 1.4rem;
+.cls-fs-rounds label,
+.cls-fs-score label {
+  font-size: 1.2rem;
+}
+
+.cls-fs-rounds p {
+  padding: 4% 4% 0 4%;
 }
 .cls-fs-rounds .cls-round-select {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
-  padding: 5% 20%;
-}
-.cls-fs-rounds .cls-round-select div {
-  margin-bottom: 5%;
+  gap: 15px;
+  padding: 10% 15%;
 }
 .cls-fs-rounds .cls-round-counter {
   display: none;
@@ -51,17 +75,12 @@ fieldset {
 }
 
 .cls-fs-score {
-  align-items: center;
-  padding: 5% 0%;
-}
-.cls-fs-score div {
-  font-size: 2rem;
+  margin-top: 5%;
+  padding: 3% 0%;
 }
 
 .cls-result {
-  width: 70%;
-  margin: 0 auto;
-  padding: 2% 0;
+  margin-top: 5%;
 }
 .cls-result div {
   font-size: 2.5rem;
@@ -71,8 +90,8 @@ fieldset {
 }
 
 .cls-selection {
-  width: 40%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 5% auto;
   padding: 3%;
 }
 .cls-selection button {
@@ -90,4 +109,44 @@ fieldset {
 .cls-restart a {
   color: orange;
   letter-spacing: 2px;
+}
+
+@media screen and (min-width: 505px) {
+  h1 {
+    font-size: 2.3rem;
+    margin: 5% 0;
+  }
+
+  fieldset,
+.cls-selection {
+    max-width: 400px;
+  }
+
+  .cls-round-select {
+    padding: 5% 15%;
+  }
+}
+@media screen and (min-width: 900px) {
+  h1 {
+    font-size: 3rem;
+    margin: 3% 0;
+  }
+
+  .cls-selection {
+    margin: 0 auto;
+  }
+
+  .cls-result,
+.cls-fs-score {
+    margin-top: 2%;
+  }
+
+  .cls-round-select {
+    padding: 2% 15%;
+  }
+
+  .cls-restart p {
+    margin: unset;
+    margin-bottom: 1%;
+  }
 }/*# sourceMappingURL=main.css.map */
