@@ -5,7 +5,7 @@ let pcChoice = 0;
 let userScore = 0;
 let pcScore = 0;
 let click = "";
-let keyValue = ['Rock', 'Paper', 'Scissors']
+let keyValue = ['Stein', 'Papier', 'Schere']
 
 document.getElementById('restart').addEventListener('click', () => {
     location.reload();
@@ -66,23 +66,24 @@ function startTheGame(userChoice, pcChoice) {
     if (round == 1) {
 
         document.getElementsByClassName('cls-round-select')[0].style.display = "none";
+        document.getElementsByClassName('rounds-headline')[0].style.display = "none";
         document.getElementsByClassName('cls-round-counter')[0].style.display = "block";
     }
 
     if (round < maxRounds) {
         switch (whoWin(userChoice, pcChoice)) {
             case 0:
-                text = `It was a draw ! You both chose ${keyValue[userChoice - 1]}`;
+                text = `<span>Ihr habt Beide</span> <br>${keyValue[userChoice - 1]} <br> <span>gewählt</span> <br> UNENTSCHIEDEN`;
                 break;
 
             case 1:
-                text = `${keyValue[userChoice - 1]} <sup>(User)</sup>  beats ${keyValue[pcChoice - 1]} <sup>(Comp)</sup>. You win!`;
+                text = `${keyValue[userChoice - 1]} <br> <span>schlägt</span> <br> ${keyValue[pcChoice - 1]} <br> <span>Die Runde geht an DICH!</span>`;
                 userScore++;
                 document.getElementById(`${click}`).style.borderColor = "green";
                 break;
 
             case -1:
-                text = `${keyValue[pcChoice - 1]} <sup>(Comp)</sup> beats ${keyValue[userChoice - 1]}<sup>(User)</sup>. You lose!`;
+                text = `${keyValue[pcChoice - 1]} <br> <span>schlägt</span> <br> ${keyValue[userChoice - 1]} <br> <span>Das war wohl nichts...!</span>`;
                 pcScore++;
                 document.getElementById(`${click}`).style.borderColor = "red";
                 break;
@@ -90,22 +91,22 @@ function startTheGame(userChoice, pcChoice) {
 
     } else if (round = maxRounds) {
         if (userScore > pcScore) {
-            text = `The user wins`;
+            text = `DU <br> <span> hast gewonnen</span>`;
             document.getElementsByClassName('fa-user')[0].style.color = "green";
         } else if (userScore < pcScore) {
-            text = `The Computer wins`;
+            text = `Du <br> <span>hast leider verloren</span>`;
             document.getElementsByClassName('fa-user')[0].style.color = "red";
         } else {
-            text = `It was a draw - No winner.....`;
+            text = `Unentschieden`;
         }
-
+        document.getElementsByClassName('cls-restart-text')[0].style.display = "none";
     } else {
         return;
     };
 
     document.getElementById("result").innerHTML = text;
     document.getElementById("score").innerHTML = `${userScore} : ${pcScore}`;
-    document.getElementById("counter").innerHTML = `${round} / ${maxRounds}`;
+    document.getElementById("counter").innerHTML = `Runde <br> ${round} von ${maxRounds}`;
 
     round++;
 }

@@ -27,7 +27,8 @@ div {
 h1 {
   width: 100%;
   text-align: center;
-  margin: 5% 0 10% 0;
+  font-size: 1.5rem;
+  margin: 7% 0;
   color: rgba(237, 232, 232, 0.944);
 }
 
@@ -53,11 +54,11 @@ fieldset {
 .cls-fs-rounds div,
 .cls-fs-score p,
 .cls-fs-score div {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .cls-fs-rounds label,
 .cls-fs-score label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .cls-fs-rounds p {
@@ -71,7 +72,7 @@ fieldset {
 }
 .cls-fs-rounds .cls-round-counter {
   display: none;
-  margin-bottom: 12%;
+  margin: 6% 0;
 }
 
 .cls-fs-score {
@@ -80,18 +81,21 @@ fieldset {
 }
 
 .cls-result {
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .cls-result div {
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 .cls-result div sup {
   font-size: 0.8rem;
 }
+.cls-result div span {
+  font-size: 1.4rem;
+}
 
 .cls-selection {
   width: 80%;
-  margin: 5% auto;
+  margin: 3% auto;
   padding: 3%;
 }
 .cls-selection button {
